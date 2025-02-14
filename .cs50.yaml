@@ -1,0 +1,4 @@
+check50:
+  files:
+    - !exclude "*"         # Exclude everything by default
+    - !include "traffic.py"  # Then include only the file(s) you need
