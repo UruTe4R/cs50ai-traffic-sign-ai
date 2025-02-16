@@ -1,4 +1,8 @@
 check50:
   files:
-    - !exclude "*"         # Exclude everything by default
-    - !include "traffic.py"  # Then include only the file(s) you need
+    - !exclude "*"          # Exclude all files by default
+    - !include "assignment.py"  # Then include just the file(s) you need
+    - !exclude "gtsrb/"    # Explicitly exclude the directory with sample images
+    - !exclude "gtsrb-small/"    # Explicitly exclude the directory with sample images
+
+

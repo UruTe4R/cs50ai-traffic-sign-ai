@@ -85,21 +85,24 @@ def get_model():
             32, (3, 3), activation="relu", input_shape=(IMG_WIDTH, IMG_HEIGHT, 3)
         ),
 
-        tf.keras.layers.MaxPooling2D(pool_size=(2, 2)),
+        tf.keras.layers.MaxPooling2D(pool_size=(3, 3)),
 
         tf.keras.layers.Flatten(),
 
-        tf.keras.layers.Dense(128, activation="relu"),
+        tf.keras.layers.Dense(32, activation="relu"),
+        tf.keras.layers.Dense(32, activation="relu"),
         tf.keras.layers.Dropout(0.5),
 
         tf.keras.layers.Dense(NUM_CATEGORIES, activation="softmax") 
     ])
 
     model.compile(
-        optimize="adam",
+        optimizer="adam",
         loss="categorical_crossentropy",
         metrics=["accuracy"]
     )
+
+    return model
 
 if __name__ == "__main__":
     main()
