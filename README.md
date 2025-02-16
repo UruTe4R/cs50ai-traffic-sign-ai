@@ -46,6 +46,7 @@ So I should bring back to 0.5
 # Nineth Model 
 I tried to add 2 layers of the size of 32 hidden layers.
 And accuracy was less than 0.85. 
+This model had the same number of units as the 64 size of 1 hidden layer, but somehow the accuracy was not improving.
 
 # Last Model
 32 size of convolutional layer
